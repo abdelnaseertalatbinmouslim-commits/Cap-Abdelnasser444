@@ -1,0 +1,4 @@
+[
+ {"id":"owner","email":"owner@capabdelnaseer.local","role":"owner","displayName":"Cap Abdelnaseer Admin","salt":"0pl7+cAThX97EO/gsU5i/A==","hash":"aOo+FaUdyqQlRoGwKJltocgQWixoPNzcQWw8XekavzAoqz/tfbx+zLX+3b8TAigZbz5PKzMSjoG2LVngak9oCw=="},
+ {"id":"content","email":"content@capabdelnaseer.local","role":"content","displayName":"Content Manager","salt":"sWG1JGaSfyOatamJVIJECg==","hash":"EGHu1odiHxwkWU3ds9Ey/roP7o4rj04MyVCXkL6JBfdT00jchhALgv9RQMagzkmy9DHXJmUxRoUCTPG8XMeTCA=="}
+]

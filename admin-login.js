@@ -1,0 +1,2 @@
+import {body,json,adminUser,sign} from './_lib.js';
+export default async function handler(req,res){if(req.method!=='POST')return json(res,405,{message:'الطلب غير مسموح'});const b=await body(req);const u=adminUser(b.email,b.password);if(!u)return json(res,401,{message:'البريد أو كلمة المرور غير صحيحة'});return json(res,200,{token:sign({type:'admin',id:u.id,role:u.role,email:u.email,name:u.displayName}),admin:{id:u.id,role:u.role,email:u.email,name:u.displayName}})}

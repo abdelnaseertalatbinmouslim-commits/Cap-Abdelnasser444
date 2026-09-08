@@ -1,0 +1,2 @@
+import {firebase,json,verifyAdmin} from './_lib.js';
+export default async function handler(req,res){const a=verifyAdmin(req);if(!a)return json(res,401,{message:'جلسة الإدارة غير صالحة'});try{const db=firebase();const keys=['students','subjects','files','videos','quizzes','quiz_results','quizAttempts','notifications','supportTickets'];const out={};await Promise.all(keys.map(async k=>out[k]=(await db.ref(k).once('value')).val()||{}));return json(res,200,{admin:a,...out})}catch(e){console.error(e);return json(res,500,{message:'تعذر تحميل بيانات الإدارة'});}}
